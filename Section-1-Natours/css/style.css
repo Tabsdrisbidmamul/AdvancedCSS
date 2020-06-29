@@ -52,8 +52,8 @@ body {
 }
 
 .logo-box:hover .logo {
-    animation: popUp 500ms ease-in;
-    -webkit-animation: popUp 500ms ease-in;
+    animation: jump 250ms ease-in;
+    -webkit-animation: jump 250ms ease-in;
 }
 
 .logo {
@@ -316,4 +316,32 @@ body {
         -ms-transform: scale(1);
         -o-transform: scale(1);
     }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+
 }
