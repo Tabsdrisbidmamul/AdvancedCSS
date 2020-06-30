@@ -8,21 +8,28 @@ Dark green: #28b485
 */
 
 /* RESET TO DEFAULT VALUES */
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+    box-sizing: inherit
+}
+
+html {
+    font-size: 62.5%;
 }
 
 /* EVERYTHING { FONT } */
 body {
     font-family: 'Lato', Arial, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    
+    box-sizing: border-box;
 }
 
 /**
@@ -45,8 +52,8 @@ body {
 /* LOGO */
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
@@ -57,7 +64,7 @@ body {
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
     
 }
 
@@ -81,14 +88,14 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main {
-    font-size: 250%;
+    font-size: 8rem;
     font-weight: 400;
-    letter-spacing: 35px;
-    margin-right: -35px;
+    letter-spacing: 3.5rem;
+    margin-right: -3.5rem;
     display: block;
 
     animation-name: moveInLeft;
@@ -97,10 +104,11 @@ body {
 }
 
 .heading-primary-sub {
-    font-size: 80%;
+    font-size: 2rem;
     font-weight: 300;
-    letter-spacing: 17.4px;
-    margin-right: -17.4px;
+    letter-spacing: 1.74rem;
+    margin-right: -1.74rem;
+    /* margin-top: -1rem; */
     display: block;
 
     animation:moveInRight 850ms ease-out;
@@ -110,20 +118,20 @@ body {
 /* TOURS BUTTON */
 .btn:link,
 .btn:visited {
+    font-size: 1.6rem;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
-    padding: 15px 40px;
-    border-radius: 100px;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
     backface-visibility: hidden;
     border: none;
     transition: all 200ms;
     position: relative;
-
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
     -webkit-backface-visibility: hidden;
     -webkit-transition: all 200ms;
     -moz-transition: all 200ms;
@@ -132,23 +140,21 @@ body {
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(-0.3rem);
+    -moz-transform: translateY(-0.3rem);
+    -ms-transform: translateY(-0.3rem);
+    -o-transform: translateY(-0.3rem);
 }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-
-    -webkit-transform: translateY(-1px);
-    -moz-transform: translateY(-1px);
-    -ms-transform: translateY(-1px);
-    -o-transform: translateY(-1px);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(-.1rem);
+    -moz-transform: translateY(-.1rem);
+    -ms-transform: translateY(-.1rem);
+    -o-transform: translateY(-.1rem);
 }
 
 .btn::after {
@@ -156,17 +162,16 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: all 400ms;
-
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
     -webkit-transition: all 400ms;
     -moz-transition: all 400ms;
     -ms-transition: all 400ms;
@@ -208,19 +213,19 @@ body {
     /* Before the animation begins or starting to begin, so the start */
     0% {
         opacity: 0;
-        transform: translateX(-100px);
-        -webkit-transform: translateX(-100px);
-        -moz-transform: translateX(-100px);
-        -ms-transform: translateX(-100px);
-        -o-transform: translateX(-100px);
-    }
+        transform: translateX(-10rem);
+        -webkit-transform: translateX(-10rem);
+        -moz-transform: translateX(-10rem);
+        -ms-transform: translateX(-10rem);
+        -o-transform: translateX(-10rem);
+}
 
     80% {
-        transform: translateX(10px);
-        -webkit-transform: translateX(10px);
-        -moz-transform: translateX(10px);
-        -ms-transform: translateX(10px);
-        -o-transform: translateX(10px);
+        transform: translateX(1rem);
+        -webkit-transform: translateX(1rem);
+        -moz-transform: translateX(1rem);
+        -ms-transform: translateX(1rem);
+        -o-transform: translateX(1rem);
 }
 
     /* The animation is or coming to an end, so the end*/
@@ -238,19 +243,19 @@ body {
     /* Before the animation begins or starting to begin, so the start */
     0% {
         opacity: 0;
-        transform: translateX(100px);
-        -webkit-transform: translateX(100px);
-        -moz-transform: translateX(100px);
-        -ms-transform: translateX(100px);
-        -o-transform: translateX(100px);
+        transform: translateX(10rem);
+        -webkit-transform: translateX(10rem);
+        -moz-transform: translateX(10rem);
+        -ms-transform: translateX(10rem);
+        -o-transform: translateX(10rem);
 }
 
     80% {
-        transform: translateX(-10px);
-        -webkit-transform: translateX(-10px);
-        -moz-transform: translateX(-10px);
-        -ms-transform: translateX(-10px);
-        -o-transform: translateX(-10px);
+        transform: translateX(-1rem);
+        -webkit-transform: translateX(-1rem);
+        -moz-transform: translateX(-1rem);
+        -ms-transform: translateX(-1rem);
+        -o-transform: translateX(-1rem);
 }
 
     /* The animation is or coming to an end, so the end*/
@@ -267,12 +272,12 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px);
-        -webkit-transform: translateY(100px);
-        -moz-transform: translateY(100px);
-        -ms-transform: translateY(100px);
-        -o-transform: translateY(100px);
-    }
+        transform: translateY(10rem);
+        -webkit-transform: translateY(10rem);
+        -moz-transform: translateY(10rem);
+        -ms-transform: translateY(10rem);
+        -o-transform: translateY(10rem);
+}
 
     100% {
         opacity: 1;
@@ -328,12 +333,12 @@ body {
     }
 
     50% {
-        transform: translateY(-10px);
-        -webkit-transform: translateY(-10px);
-        -moz-transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
-        -o-transform: translateY(-10px);
-    }
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+}
 
     100% {
         transform: translateY(0);
