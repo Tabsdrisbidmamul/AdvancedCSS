@@ -50,7 +50,7 @@ body {
 }
 
 /* LOGO */
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
@@ -58,19 +58,19 @@ body {
     -webkit-backface-visibility: hidden;
 }
 
-.logo-box:hover .logo {
+.header__logo-box:hover .header__logo {
     animation: jump 250ms ease-in;
+    cursor: pointer;
     -webkit-animation: jump 250ms ease-in;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
-    
 }
 
 /**
  HEADER DIV BOX */
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -91,7 +91,7 @@ body {
     margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     font-size: 8rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
@@ -103,7 +103,7 @@ body {
     animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 1.74rem;
@@ -187,17 +187,17 @@ body {
     -o-transform: scale(1.4, 1.6);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
 
-.btn-white::after {
+.btn--white::after {
     content: "";
     background-color: #fff;
 }
 
-.btn-animate {
+.btn--animate {
     animation: moveInBottom 500ms ease-out 600ms;
     -webkit-animation: moveInBottom 500ms ease-out 600ms;
     animation-fill-mode: backwards;
