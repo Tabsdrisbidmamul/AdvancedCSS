@@ -1,0 +1,96 @@
+/**
+ BUTTON */
+ .btn {
+    &:link, 
+    &:visited {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        backface-visibility: hidden;
+        border: none;
+        transition: all 200ms;
+        position: relative;
+
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: all 200ms;
+        -moz-transition: all 200ms;
+        -ms-transition: all 200ms;
+        -o-transition: all 200ms;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        -webkit-transform: translateY(-0.3rem);
+        -moz-transform: translateY(-0.3rem);
+        -ms-transform: translateY(-0.3rem);
+        -o-transform: translateY(-0.3rem);
+
+        &::after {
+            transform: scale(1.4, 1.6);
+            opacity: 0;
+    
+            -webkit-transform: scale(1.4, 1.6);
+            -moz-transform: scale(1.4, 1.6);
+            -ms-transform: scale(1.4, 1.6);
+            -o-transform: scale(1.4, 1.6);
+        }
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+
+        -webkit-transform: translateY(-.1rem);
+        -moz-transform: translateY(-.1rem);
+        -ms-transform: translateY(-.1rem);
+        -o-transform: translateY(-.1rem);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 400ms;
+
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        -webkit-transition: all 400ms;
+        -moz-transition: all 400ms;
+        -ms-transition: all 400ms;
+        -o-transition: all 400ms;
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+    
+        &::after {
+            content: "";
+            background-color: $color-white;
+        }
+    }
+
+    &--animate {
+        animation: moveInBottom 500ms ease-out 600ms;
+
+        -webkit-animation: moveInBottom 500ms ease-out 600ms;
+        animation-fill-mode: backwards;
+    }
+}

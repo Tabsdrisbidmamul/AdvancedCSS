@@ -1,0 +1,80 @@
+/**
+GLOBAL TYPOGRAPHY SETTINGS
+*/
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+
+    
+}
+
+/**
+ HEADER TEXT */
+ .heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        font-size: 8rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        margin-right: -3.5rem;
+        display: block;
+    
+        animation-name: moveInLeft;
+        animation-duration: 850ms;
+        animation-timing-function: ease-out;
+    }
+    
+    &--sub {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 1.74rem;
+        margin-right: -1.74rem;
+        /* margin-top: -1rem; */
+        display: block;
+    
+        animation:moveInRight 850ms ease-out;
+        -webkit-animation:moveInRight 850ms ease-out;
+    }
+}
+
+/**
+SECTION-ABOUT*/
+
+
+/* EVERYTHING H2 */
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-image: -moz-linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    display: inline-block;
+
+    -webkit-background-clip: text;
+    backface-visibility: hidden;
+    color: transparent;
+    letter-spacing: 2px;
+    transition: all 200ms ease;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    
+    &:hover{
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+        transform: skewY(0deg) skewX(2deg) scale(1.1);
+        -webkit-transform: skewY(0deg) skewX(2deg) scale(1.1);
+        -moz-transform: skewY(0deg) skewX(2deg) scale(1.1);
+        -ms-transform: skewY(0deg) skewX(2deg) scale(1.1);
+        -o-transform: skewY(0deg) skewX(2deg) scale(1.1);
+}
+}

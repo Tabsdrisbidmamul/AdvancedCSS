@@ -1,0 +1,49 @@
+/**
+ HEADER HERO */
+ .header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)
+        ), 
+        url("../img/hero.jpg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    /* LOGO */
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    &__logo-box:hover &__logo {
+        animation: jump 250ms ease-in;
+        cursor: pointer;
+        -webkit-animation: jump 250ms ease-in;
+}
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    /**
+    HEADER DIV BOX */
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+}
