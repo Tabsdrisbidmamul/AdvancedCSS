@@ -6,41 +6,27 @@
 
 .section-features {
     position: relative;
-    padding: 20rem 0;
-    z-index: 1;
-    margin-top: -13rem;
-    
-    transform: skewY(-7deg);
-    
-    & > * {
-        transform: skewY(7deg);
-    }
+    padding: 30rem 0;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(
-            to right bottom, 
-            rgba($color-primary-light, 0.8), 
-            rgba($color-primary-dark, 0.8)
-            ), 
-            url("../../img/nat-4.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        z-index: -1;
+    margin-top: -20rem;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)
+        ), 
+        url("../img/nat-4.jpg");
+    height: 100%;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
 
-    }
 
 }
 
 .section-tours {
     background-color: $color-grey-light-1;
     padding: 25rem 0 50rem 0;
-    margin-top: -10rem;
+    margin-top: -22rem;
 }
