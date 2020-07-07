@@ -14,7 +14,7 @@
         height: 52rem;
 
         transition: all 800ms ease;
-        border-radius: 3px;
+        border-radius: $default-border-radius;
         overflow: hidden;
         box-shadow: 0 1rem 2.5rem rgba($color-black, .2);
 
@@ -61,8 +61,8 @@
         height: 23rem;
         background-blend-mode: screen;
         display: block;
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px;
+        border-top-right-radius: $default-border-radius;
+        border-top-left-radius: $default-border-radius;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
         &--1 {

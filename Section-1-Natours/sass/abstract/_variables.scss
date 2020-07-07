@@ -15,6 +15,14 @@ $color-tertiary-dark: #5643fa;
 $color-grey-light-1: #f7f7f7; 
 $color-grey-light-2: #eee; 
 
+/* FONT COLORS */
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
 /* FONT-SIZES */
 $default-font-size: 1.6rem;
 $h1-main-font-size: 8rem;
@@ -36,13 +44,14 @@ $card-price-value-font-size: 7.5rem;
 /* FIGCAPTION */
 $figcaption-font-size: 1.7rem;
 
+/* FOOTER */
+$footer-font-size: 1.4rem;
 
-/* FONT COLORS */
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
 
 /* GRID VARIABLES */
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
+/* BORDERS */
+$default-border-radius: 3px;
