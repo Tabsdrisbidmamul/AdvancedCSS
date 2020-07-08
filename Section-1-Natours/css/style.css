@@ -738,7 +738,7 @@ SECTION-ABOUT*/
     display: inline-block;
     border-top: 1px solid #777;
     padding-top: 3rem; }
-  .footer .footer__link:link, .footer .footer__link:visited, .footer .footer__copyright {
+  .footer .footer__copyright {
     color: #f7f7f7; }
   .footer__logo-box {
     text-align: center;
@@ -753,6 +753,7 @@ SECTION-ABOUT*/
     .footer__item:not(:last-child) {
       margin-right: 1.5rem; }
   .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
