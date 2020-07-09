@@ -119,26 +119,40 @@
 @keyframes jump {
     0% {
         transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
+        
+    }
+
+    12.5% {
+        transform: translateY(-1rem); 
+    }  
+
+    25% {
+        transform: translateY(0);
+    }
+
+    37.5% {
+        transform: translateY(-.75rem);
     }
 
     50% {
-        transform: translateY(-1rem);
-        -webkit-transform: translateY(-1rem);
-        -moz-transform: translateY(-1rem);
-        -ms-transform: translateY(-1rem);
-        -o-transform: translateY(-1rem);
-}
+        transform: translateY(0);
+    }
+
+    62.5% {
+        transform: translateY(-.5rem);
+    }
+
+    75% {
+        transform: translateY(0);
+    }
+
+    87.5% {
+        transform: translateY(.25rem);
+    }
 
     100% {
         transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
+        
     }
 
 

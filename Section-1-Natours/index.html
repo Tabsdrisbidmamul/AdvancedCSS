@@ -9,10 +9,57 @@
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#section-about" class="navigation__link">
+                            About Natours
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a href="#section-features" class="navigation__link">
+                            Your Benefits
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a href="#section-tours" class="navigation__link">
+                            Popular Tours
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a href="#section-stories" class="navigation__link">
+                            Stories
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a href="#section-book" class="navigation__link">
+                            Book Now
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
         <header class="header">
             <div class="header__logo-box">
                 <img src="img/logo-white.png" alt="Logo" class="header__logo"/>
@@ -24,13 +71,13 @@
                     <span class="heading-primary--sub">is where life happens<span>
                 </h1>
 
-                <a href="#" class="btn btn--white btn--animate">Discover Our Tours</a>
+                <a href="#section-tours" class="btn btn--white btn--animate">Discover Our Tours</a>
                 
             </div>
         </header>
 
         
-        <section class="section-about trigger">
+        <section class="section-about" id="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Exciting tours for adventurous people
@@ -64,7 +111,7 @@
         </section>
 
         <main>
-            <section class="section-features">
+            <section class="section-features" id="section-features">
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="feature-box">
@@ -123,7 +170,7 @@
             </section>
 
         
-            <section class="section-tours">
+            <section class="section-tours" id="section-tours">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
                         Most Popular Tours
@@ -160,7 +207,7 @@
                                         <p class="card__price-value">$249</p>
                                     </div>
     
-                                    <a href="#" class="btn btn--white">Book Now!</a>
+                                    <a href="#tour-popup" class="btn btn--white --tour-popup">Book Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +242,7 @@
                                         <p class="card__price-value">$497</p>
                                     </div>
     
-                                    <a href="#" class="btn btn--white">Book Now!</a>
+                                    <a href="#tour-popup" class="btn btn--white --tour-popup">Book Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +277,7 @@
                                         <p class="card__price-value">$897</p>
                                     </div>
     
-                                    <a href="#" class="btn btn--white">Book Now!</a>
+                                    <a href="#tour-popup" class="btn btn--white --tour-popup">Book Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +291,7 @@
                 </div>
             </section>
 
-            <section class="section-stories">
+            <section class="section-stories" id="section-stories">
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4" />
@@ -304,7 +351,7 @@
                     </div>
             </section>
 
-            <section class="section-book">
+            <section class="section-book" id="section-book">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
@@ -356,7 +403,7 @@
             </section>
         </main>
 
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer__logo-box">
                 <img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo" />
             </div>
@@ -396,6 +443,25 @@
             </div>
         </footer>
         
+
+        <div class="popup" id="tour-popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Tour Photo" class="popup__img" />
+
+                    <img src="img/nat-9.jpg" alt="Tour Photo" class="popup__img" />
+                </div>
+
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start Booking Now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida. Pretium lectus quam id leo in vitae. In mollis nunc sed id semper risus in hendrerit gravida. Duis ut diam quam nulla porttitor massa. Luctus venenatis lectus magna fringilla urna. Senectus et netus et malesuada. Ultricies leo integer malesuada nunc vel. Odio morbi quis commodo odio. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Pellentesque eu tincidunt tortor aliquam nulla facilisi. Amet purus gravida quis blandit turpis cursus in hac habitasse. Pulvinar proin gravida hendrerit lectus. Gravida neque convallis a cras. Sed felis eget velit aliquet sagittis. Egestas diam in arcu cursus euismod quis viverra nibh cras. Tellus molestie nunc non blandit massa enim nec dui nunc.</p>
+
+                    <a href="#" class="btn btn--green-gradient u-margin-top-medium">Book Now</a>
+                </div>
+            </div>
+        </div>
         
 
         <!--
@@ -479,6 +545,34 @@
             </div>
         </section>
     -->
+    <script src="index.js"></script>
+    <script type="text/javascript">
+        // cache DOM
+        const navigation = document.querySelector('.navigation');
+        const navCheckbox = navigation.querySelector('.navigation__checkbox');
+        const navItems = navigation.querySelectorAll('.navigation__item');
+        navItems.forEach(link =>
+            link.addEventListener('click', () => navCheckbox.checked = false));
+
+        const cross = document.querySelector(".popup__close");
+        const popup = document.querySelector(".popup");
+        cross.addEventListener("click", (e) => {
+            popup.style.visibilty = "hidden";
+            popup.style.opacity = "0";
+
+            location.assign("/#section-tours");
+        });
+
+        const tourBtn = document.querySelectorAll(".--tour-popup");
+        tourBtn.forEach(item => {
+            item.addEventListener("click", () => {
+                popup.style.visibilty = "visible";
+                popup.style.opacity = "1";
+            });
+        });
+    </script>
+
+
 
     </body>
 </html>

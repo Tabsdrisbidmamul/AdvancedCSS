@@ -25,13 +25,13 @@
     }
 
     &__logo-box:hover &__logo {
-        animation: jump 250ms ease-in;
+        animation: jump 1000ms ease-in;
         cursor: pointer;
-        -webkit-animation: jump 250ms ease-in;
-}
+    }
 
     &__logo {
         height: 3.5rem;
+        
     }
 
     /**
