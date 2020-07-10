@@ -1,3 +1,22 @@
+/* MEDIA QUERY MANAGER */
+/*
+0 - 600px:     Phone               ** MAX WIDTH **
+600 - 900px:   Tablet Portrait
+900 - 1200px:  Tablet Landscape
+1200 - 1800px: Normal Styles apply ** STYLES COMPLETE **
+ > 1800px:     Big Desktop         ** MIN WIDTH **  
+
+$breakpoint argument choices:
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+
+*/
+/*
+We use ems and not rems simply because how browsers process ems
+
+*/
 /**
  COLORS */
 /* MAIN COLOUR PALLET */
@@ -18,8 +37,22 @@
   box-sizing: inherit; }
 
 /* GLOBAL SETTINGS */
+/* All media queries font size are calculated based on the default 16px
+the order of the queries matter, put the largest at the top and smallest at the bottom */
 html {
   font-size: 62.5%; }
+  @media (min-width: 125em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   box-sizing: border-box; }

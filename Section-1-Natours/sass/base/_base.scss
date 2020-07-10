@@ -9,12 +9,37 @@
 
 
 /* GLOBAL SETTINGS */
+/* All media queries font size are calculated based on the default 16px
+the order of the queries matter, put the largest at the top and smallest at the bottom */
 html {
     // 62.5% = 10px = 1rem
     font-size: 62.5%;
+    
+    // BIG DESKTOP
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12px -> 12/16 = .75
+    }
+
+    // TABLET LANDSCAPE
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem = 9px -> 9/16 = .5625
+    }
+    
+    // TABLET PORTRAIT
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px -> 8/16 = .5
+    }
+
+    // PHONE
+    @include respond(phone) {
+        font-size: 37.5%; // 1rem = 6px -> 6/16 = .375
+    }
+
+
+
 }
 
 body {
-
     box-sizing: border-box;
 }
+
