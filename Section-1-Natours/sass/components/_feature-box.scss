@@ -9,10 +9,18 @@
     transition-property: transform, box-shadow;
     transition-duration: 200ms;
 
+
+    @include respond(tab-land) {
+        padding: 2rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 1rem;
+    }
+
     &:hover {
         transform: translateY(-1.5rem) scale(1.03);
         box-shadow: .5rem 2rem 4.5rem rgba($color-black, .20);
-        
         
     }
 
@@ -24,6 +32,11 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+
+        @include respond(tab-port) {
+            margin: 0rem;
+        }
+
     }
 
 }

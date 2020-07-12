@@ -7,8 +7,7 @@ body {
     /* font-size: 16px; */
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
-
+    
 }
 
 /**
@@ -20,6 +19,7 @@ body {
     -webkit-backface-visibility: hidden;
     margin-bottom: 6rem;
 
+
     &--main {
         font-size: $h1-main-font-size;
         font-weight: 400;
@@ -30,6 +30,16 @@ body {
         animation-name: moveInLeft;
         animation-duration: 850ms;
         animation-timing-function: ease-out;
+        
+        @include respond(tab-port) {
+            letter-spacing: 2rem;
+            font-size: $h1-main-font-size-tab-port;
+        }
+
+        @include respond(phone) {
+            letter-spacing: 1.5rem;
+            font-size: $h1-main-font-size-phone;
+        }
     }
     
     &--sub {
@@ -42,6 +52,17 @@ body {
     
         animation:moveInRight 850ms ease-out;
         -webkit-animation:moveInRight 850ms ease-out;
+
+    
+        @include respond(tab-port) {
+            letter-spacing: 1.3rem;
+            font-size: $h1-sub-font-size-tab-port;
+        }
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: $h1-sub-font-size-phone;
+        }
     }
 }
 
@@ -67,6 +88,18 @@ SECTION-ABOUT*/
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
+
+    @include respond(tab-land) {
+        font-size: $h2-font-size-tab-land;
+    }
+
+    @include respond(tab-port) {
+        font-size: $h2-font-size-tab-port;
+    }
+
+    @include respond(phone) {
+        font-size: $h2-font-size-phone;
+    }
     
     &:hover{
         text-shadow: .5rem .25rem 1rem rgba($color-black, .15);

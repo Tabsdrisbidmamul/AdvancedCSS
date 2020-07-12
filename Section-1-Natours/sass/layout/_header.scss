@@ -15,6 +15,14 @@
 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    @include respond(tab-land) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+    @include respond(tab-port) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
     /* LOGO */
     &__logo-box {
         position: absolute;

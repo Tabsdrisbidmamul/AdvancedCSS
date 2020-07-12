@@ -10,7 +10,9 @@
 
 /* GLOBAL SETTINGS */
 /* All media queries font size are calculated based on the default 16px
-the order of the queries matter, put the largest at the top and smallest at the bottom */
+the order of the queries matter, put the largest at the top and smallest at the bottom for desktop-first
+
+smallest to larger for mobile-first*/
 html {
     // 62.5% = 10px = 1rem
     font-size: 62.5%;
@@ -36,10 +38,14 @@ html {
     }
 
 
-
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
 

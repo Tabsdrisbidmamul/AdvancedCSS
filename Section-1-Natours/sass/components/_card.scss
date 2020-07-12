@@ -164,6 +164,69 @@
         font-size: $card-price-value-font-size;
         font-weight: 100;
     }
+
+    @include respond(tab-port) {
+
+        // SAME HEIGHT TO FIX FLOAT ISSUE
+        height: auto;
+        width: 75%;
+        margin: 0 auto;
+
+        &__side {
+        
+            // SAME HEIGHT TO FIX FLOAT ISSUE
+            height: auto;
+
+            border-radius: $default-border-radius;
+            overflow: hidden;
+            box-shadow: 0 1rem 2.5rem rgba($color-black, .2);
+
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            &--front {
+                padding-bottom: 15%;
+            }
+
+            &--back {
+                transform: rotateY(0);
+                width: 100%;
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                margin-top: -15%;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0);
+            box-shadow: 1rem 2rem 5rem rgba($color-black, .2);
+        }
+
+        /* BACK SIDE STYLING */
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transform: translate(0, 0);
+            padding: 15% 2rem 4rem 2rem;
+            
+        }
+
+        &__price-box {
+            margin-bottom: 4rem;
+            
+        }
+
+
+        &__price-value {
+            font-size: $card-price-value-font-size-tab-port;
+            font-weight: 100;
+        }
+    }
 }
 
 

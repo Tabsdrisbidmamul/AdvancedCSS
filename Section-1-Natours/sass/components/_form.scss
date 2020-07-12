@@ -22,6 +22,13 @@
         width: 90%;
         display: block;
         transition: all 200ms;
+
+        @include respond(tab-port) {
+            &:last-of-type {
+                margin-bottom: 2rem;
+            }
+            width: 100%;
+        }
         
         &:focus {
             outline: none;
@@ -89,6 +96,11 @@
     &__radio-group {
         width: 100%;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     }
 
     &__radio-label {
@@ -97,6 +109,13 @@
         cursor: pointer;
         padding-left: 4.5rem;
         padding-right: 2rem;
+        
+        @include respond(tab-port) {
+            &:not(:last-of-type) {
+                margin-bottom: 2rem;                
+            }
+            display: block;
+        }
     }
 
     &__radio-button {

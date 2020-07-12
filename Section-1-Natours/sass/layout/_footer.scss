@@ -2,16 +2,30 @@
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: $footer-font-size;
+
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
     
 
     %common-display {
         display: inline-block;
         border-top: 1px solid $color-grey-dark;
         padding-top: 3rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
 
     %common-color {
         color: $color-grey-light-1;
+
+        @include respond(tab-port) {
+            margin-bottom: 4rem;
+        }
     }
 
 

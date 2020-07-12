@@ -26,9 +26,19 @@ $color-black: #000;
 
 /* FONT-SIZES */
 $default-font-size: 1.6rem;
+
 $h1-main-font-size: 8rem;
+$h1-main-font-size-tab-port: 6.5rem;
+$h1-main-font-size-phone: 5.5rem;
 $h1-sub-font-size: 2rem;
+$h1-sub-font-size-tab-port: 1.75rem;
+$h1-sub-font-size-phone: 1.5rem;
+
 $h2-font-size: 4rem;
+$h2-font-size-tab-land: 3.1rem;
+$h2-font-size-tab-port: 3rem;
+$h2-font-size-phone: 2.75rem;
+
 $h3-font-size: 1.6rem;
 
 /* FEATURES */
@@ -40,6 +50,7 @@ $features-box__icon: 6rem;
 $card-heading-font-size: 2.8rem;
 $card-heading-weight: 300;
 $card-price-value-font-size: 7.5rem;
+$card-price-value-font-size-tab-port: 6rem;
 
 
 /* FIGCAPTION */
@@ -51,7 +62,9 @@ $footer-font-size: 1.4rem;
 
 /* GRID VARIABLES */
 $grid-width: 114rem;
+$grid-width-tab-port: 50rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-tab-port: 6rem;
 $gutter-horizontal: 6rem;
 
 /* BORDERS */
