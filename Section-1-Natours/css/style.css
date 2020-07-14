@@ -504,7 +504,7 @@ SECTION-ABOUT*/
       padding: 2rem; } }
   @media (max-width: 56.25em) {
     .feature-box {
-      padding: 1rem; } }
+      padding: 2rem; } }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03);
     box-shadow: 0.5rem 2rem 4.5rem rgba(0, 0, 0, 0.2); }
@@ -925,7 +925,7 @@ SECTION-ABOUT*/
  HEADER HERO */
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -934,6 +934,9 @@ SECTION-ABOUT*/
   /* LOGO */
   /**
     HEADER DIV BOX */ }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url("../img/hero.jpg"); } }
   @media (max-width: 75em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
