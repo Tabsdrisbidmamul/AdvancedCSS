@@ -9,8 +9,11 @@
     
     opacity: 0;
     visibility: hidden;
+    
 
     transition: all 300ms;
+
+
 
     &__content {
         @include center-absolute;
@@ -20,16 +23,25 @@
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         display: table;
         overflow: hidden;
+        
 
         opacity: 0;
         transform: translate(-50%, -50%) scale(.5);
 
         transition: all 400ms 200ms;
+
+        @include respond(tab-port) {
+            padding: 2rem;
+        }
     }
 
     &__left {
         width: 33.333333333333%;
         display: table-cell;
+
+        @include respond(tab-port) {
+            display: table-row;
+        }
 
     }
 
@@ -38,11 +50,25 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-port) {
+            & {
+                text-align: center;
+            }
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-port) {
+            width: 50%;
+            float: left;
+            display: table-row;
+            position: relative;
+
+        }
     }
 
     &__text {
@@ -56,6 +82,11 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+            text-align: justify;
+        }
     }
 
     &:target {
