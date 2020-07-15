@@ -24,10 +24,15 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        /* For this property to work, the elements width, height must be defined and it must be floated */
-        shape-outside: circle(50% at 50% 50%);
+        border-radius: 50%;
+        overflow: hidden;
 
-        clip-path: circle(50% at 50% 50%);
+        @supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            /* For this property to work, the elements width, height must be defined and it must be floated */
+            shape-outside: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 
         transform: translateX(-3rem) skewX(12deg);
 

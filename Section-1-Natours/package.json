@@ -4,7 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css"
   },
