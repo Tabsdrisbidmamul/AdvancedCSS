@@ -1,0 +1,125 @@
+
+/*** LOGO ***/
+.logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+
+/*** SEARCH BOX ***/
+.search {
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        width: 90%;
+        padding: .7rem 2rem;
+        border: none;
+        border-radius: 100rem;
+        background-color: var(--color-grey-light-2);
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        margin-right: -3.25rem;
+        transition: all 300ms;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::placeholder {
+            color: var(--color-grey-dark-3);
+            opacity: 1;
+            font-weight: 100;
+        }
+        
+    }
+
+    // &__input:focus + &__button {
+    //     background-color: var(--color-grey-light-3);
+    // }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+
+        &:focus {
+            outline: none;
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-dark-3);
+        
+    }
+}
+
+
+
+/*** USER NAV ***/
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__icon-box {
+        position: relative;
+    }
+    
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--color-grey-dark-2);
+        
+    }
+
+    &__notification {
+        position: absolute;
+        font-size: .8rem;
+        font-weight: 600;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: #fff;
+        top: 1.5rem;
+        right: 1.25rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__user {
+        &-photo {
+            height: 3.75rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+    }
+
+    
+}
