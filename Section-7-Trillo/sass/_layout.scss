@@ -12,8 +12,9 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: var(--color-grey-light-1);
+    border-bottom: 1px solid var(--color-grey-light-2);
 
+    // FLEXBOX
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -22,6 +23,7 @@
 }
 
 .content {
+    // FLEXBOX 
    display: flex;
    flex-flow: row nowrap;
    
@@ -30,12 +32,20 @@
 
 .sidebar {
     background-color: var(--color-grey-dark-1);
+    // Do not let the flex item to grow, shrink but give a width (flex-basis) of 18%
     flex: 0 0 18%;
     
+    // FLEXBOX
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }   
 
 .hotel-view {
-    background-color: orangered;
+    // TODO: TESTING REMOVE LATER
+    height: 80rem;
+
+    // Let the flex item grow
     flex: 1;
     
 }
