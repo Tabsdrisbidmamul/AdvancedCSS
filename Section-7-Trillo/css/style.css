@@ -11,7 +11,10 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   /*** BOX SHADOWS ***/
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3); }
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
+  /*** BORDER LINE ***/
+  --line: 1px solid var(--color-grey-light-2); }
 
 /*** RESET TO DEFAULTS ***/
 * {
@@ -146,8 +149,6 @@ body {
   .side-nav__item:hover::before, .side-nav__item--active::before {
     transform: scaleY(1);
     width: 100%; }
-  .side-nav__item:active::before {
-    background-color: var(--color-primary-light); }
   .side-nav__link:link, .side-nav__link:visited {
     display: block;
     display: flex;
@@ -184,7 +185,7 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  border-bottom: 1px solid var(--color-grey-light-2); }
+  border-bottom: var(--line); }
   .overview__heading {
     display: block;
     font-weight: 300;
@@ -242,13 +243,128 @@ body {
   border-bottom: 1.5px solid currentColor;
   display: inline-block;
   cursor: pointer;
-  transition: all 200ms;
+  text-align: center;
+  transition: all 400ms;
   backface-visibility: hidden; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: .6rem;
+      transition: margin-left 200ms; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 300ms infinite; }
+  .btn-inline span {
+    margin-left: .3rem; }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  padding: 3rem 0;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-flow: row wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; }
+    .list__item::before {
+      content: "";
+      display: inline-block;
+      height: 1.75rem;
+      width: 1.75rem;
+      margin-right: .7rem;
+      background-color: var(--color-primary);
+      mask-image: url("../img/navigate_next.svg");
+      mask-size: cover; }
+
+.recommended {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .recommended__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff; }
+    .recommended__photo:not(:last-of-type) {
+      margin-right: -1.5rem; }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 10; }
+  .review__text {
+    margin-bottom: 2rem; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+  .review__photo {
+    display: block;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 2rem; }
+  .review__user-box {
+    margin-right: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start; }
+  .review__user-name {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: .2rem; }
+  .review__user-date {
+    font-size: 1rem;
+    font-size: 300;
+    color: car(--color-grey-dark-3); }
+  .review__rating {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--color-primary); }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -3rem;
+    left: -1rem;
+    display: block;
+    font-size: 20rem;
+    z-index: -10;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    line-height: 1; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+
+.book-now {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem; }
+
+.btn {
+  border: none;
+  padding: 1.5rem 3rem;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  border-radius: 100rem;
+  color: #fff;
+  font-size: 1.4rem; }
 
 @keyframes pulsate {
   0% {
@@ -274,7 +390,7 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -292,5 +408,24 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  height: 80rem;
   flex: 1; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+  font-size: 1.4rem; }
+
+.description {
+  flex: 0 0 60%;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-right: 4.5rem; }
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
