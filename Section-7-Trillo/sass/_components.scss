@@ -16,6 +16,12 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+
     &__input {
         width: 90%;
         padding: .7rem 2rem;
@@ -137,11 +143,24 @@
     margin-top: 3.5rem;
     backface-visibility: hidden;
 
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
 
@@ -156,18 +175,27 @@
         transform: scaleY(0);
         transform-origin: center;
         transition: transform 200ms, width 400ms cubic-bezier(1,0,0,1) 200ms, background-color 100ms;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            height: 3px;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 200ms, height 400ms cubic-bezier(1,0,0,1) 200ms, background-color 100ms;
+        }
     }
 
     &__item:hover::before,
     &__item--active::before {
         transform: scaleY(1);
         width: 100%;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 100%;
+            transform: scaleX(1);
+        }
         
     }
-
-    // &__item:active::before {
-    //     background-color: var(--color-primary-light);
-    // }
 
     &__link:link,
     &__link:visited {
@@ -185,6 +213,23 @@
 
         position: relative;
         z-index: 10;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-flow: column;
+            padding: 1.5rem .5rem;
+        }
+
+        & span {
+            @media only screen and (max-width: $bp-small) {
+                display: none;
+            }
+        }
+
     }
 
     &__icon {
@@ -192,6 +237,13 @@
         height: 1.75rem;
         fill: currentColor;
         margin-right: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 2rem;
+            height: 2rem;
+        }
     }
 }
 
@@ -202,8 +254,12 @@
     padding: 2.5rem;
     color: var(--color-grey-light-4);
 
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 
 }
+
 
 /*** GALLERY ***/
 .gallery {
@@ -221,6 +277,10 @@
     // FLEXBOX
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-flow: column;
+    }
     
     background-color: #fff;
     border-bottom: var(--line);
@@ -233,6 +293,11 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1rem 2rem;
+        }
         
     }
 
@@ -246,6 +311,11 @@
         width: 1.75rem;
         height: 1.75rem;
         fill: var(--color-primary);
+
+        @media only screen and (max-width: $bp-small) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 
     &__icon-location {
@@ -271,16 +341,28 @@
         align-items: center;
         justify-content: center;
 
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
+
         &-average {
             text-align: center;
             font-size: 2.5rem;
             font-weight: 300;
             margin-bottom: -.3rem;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 2rem;
+            }
         }
 
         &-count {
             font-size: .8rem;
             text-transform: uppercase;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: .5rem;
+            }
         }
     }
 }
@@ -296,6 +378,10 @@
     display: flex;    
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-smallest) {
+        justify-content: flex-start;
+    }
 
 }
 
@@ -381,7 +467,9 @@
 
             // Newer Browser - mask
             background-color: var(--color-primary);
+            -webkit-mask-image:  url("../img/navigate_next.svg");
             mask-image:  url("../img/navigate_next.svg");
+            -webkit-mask-size: cover;
             mask-size: cover;
 
         }
@@ -402,7 +490,7 @@
     }
 
     &__friends {
-
+        display: flex;
     }
 
     &__photo {
@@ -415,6 +503,10 @@
 
         &:not(:last-of-type) {
             margin-right: -1.5rem;
+
+            @media only screen and (max-width: $bp-largest) {
+                margin-right: -2.5rem;
+            }
         }
     }
 }
@@ -430,8 +522,14 @@
     position: relative;
     z-index: 10;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
-
+    @media only screen and (max-width: $bp-small) {
+        width: 100%;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -494,26 +592,39 @@
         color: var(--color-grey-light-2);
         font-family: sans-serif;
         line-height: 1;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 18rem;
+        }
     }
 }
 
 // CTA
-
 .cta {
    padding: 3.5rem 0;
    text-align: center;
-}
+   background-color: #fff;
 
-.book-now {
+   @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0; 
+   }
+
+   &__book-now {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 300;
     margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.4rem;
+        }
+    }
 }
 
+// CTA BTN
 .btn {
     border: none;
-    padding: 1.5rem 3rem;
+    // padding: 2rem 6rem;
     background-image: linear-gradient(
         to right, 
         var(--color-primary-light),
@@ -522,6 +633,66 @@
     border-radius: 100rem;
     color: #fff;
     font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.2rem;
+    }
+
+    & > * {
+        display: inline-block;
+        transition: all 200ms;
+        height: 100%;
+        width: 100%;
+        
+    }
+    
+    &__visible {
+        padding: 2rem 8rem;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 1rem 4rem;
+        }
+    }
+
+    &__invisible {
+        position: absolute;
+        left: 0;
+        top: -100%;
+        padding: 2rem 0;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 1rem 0;
+        }
+
+    }
+
+    &:hover {
+        background-image: linear-gradient(
+        to left, 
+        var(--color-primary-light),
+        var(--color-primary-dark)
+        );
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 500ms infinite;
+    }
+
+
+    &:hover &__invisible {
+        top: 0;   
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
 }
 
 
