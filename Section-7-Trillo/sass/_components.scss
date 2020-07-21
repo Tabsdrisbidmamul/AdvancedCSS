@@ -276,10 +276,11 @@
 .overview {
     // FLEXBOX
     display: flex;
-    justify-content: space-between;
 
     @media only screen and (max-width: $bp-smallest) {
-        flex-flow: column;
+        flex-wrap: wrap;
+        align-content: space-between;
+        
     }
     
     background-color: #fff;
@@ -298,11 +299,23 @@
             font-size: 1.8rem;
             padding: 1rem 2rem;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            flex: 1;
+        }
         
     }
 
     &__stars {
-        display: flex;       
+        flex: 1;
+
+        @media only screen and (max-width: $bp-smallest) {
+            order: 1;
+            flex: 1 0 100%;
+            margin-left: 2rem;
+        }
+        display: flex;
+        align-items: center;       
     }
 
 
@@ -334,7 +347,7 @@
         color: #fff;
         padding: .7rem 2rem;
         margin-left: 2.5rem;
-        align-self: stretch;
+        // align-self: stretch;
 
         display: flex;
         flex-flow: column nowrap;
@@ -343,6 +356,8 @@
 
         @media only screen and (max-width: $bp-small) {
             padding: 0 1.5rem;
+            margin-left: 2rem;
+            
         }
 
         &-average {
@@ -365,24 +380,6 @@
             }
         }
     }
-}
-
-// OVERVIEW FLEXBOX RIGHT AND LEFT
-.left {
-    display: flex;
-    align-items: center;
-
-}
-
-.right {
-    display: flex;    
-    align-items: center;
-    justify-content: space-between;
-
-    @media only screen and (max-width: $bp-smallest) {
-        justify-content: flex-start;
-    }
-
 }
 
 // BTN-INLINE
@@ -462,16 +459,20 @@
             margin-right: .7rem;
 
             // older browser
-            // background-image: url("../img/navigate_next.svg");
-            // background-size: cover;
+            background-image: url("../img/navigate_next.svg");
+            background-size: cover;
 
             // Newer Browser - mask
-            background-color: var(--color-primary);
-            -webkit-mask-image:  url("../img/navigate_next.svg");
-            mask-image:  url("../img/navigate_next.svg");
-            -webkit-mask-size: cover;
-            mask-size: cover;
+            @supports(-webkit-mask-image: url()) or (mask-image: url()) {
+                background-color: var(--color-primary);
+                -webkit-mask-image:  url("../img/navigate_next.svg");
+                mask-image:  url("../img/navigate_next.svg");
+                -webkit-mask-size: cover;
+                mask-size: cover;  
 
+                background-image: none;
+            }
+            
         }
     }
 }
