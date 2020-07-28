@@ -5,6 +5,13 @@
 
 .heading {
 
+    &-1 {
+        @extend %heading;
+        font-size: 4.5rem;
+        color: $color-grey-light-1;
+        line-height: 1;
+    }
+
     &-2 {
         @extend %heading;
         font-size: 4rem;
@@ -41,7 +48,7 @@
     font-family: $font-display;
     text-transform: uppercase;
     color: #fff;
-    border-radius: 0;
+    border-radius: 3px;
     cursor: pointer;
 
     transition: background-color 200ms;

@@ -2,4 +2,121 @@
     background-color: $color-primary;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
+    transition: all 50ms;
+
+    position: relative;
+    overflow-x: hidden;
+
+
+    &__subgrid {
+        display: grid;
+        grid-template-columns: subgrid;
+    }
+
+
+    &__nav {
+        list-style: none;
+        display: none;
+        position: fixed;
+        // margin-left: 4rem;
+        top: 5rem;
+        left: 7rem;
+    }
+
+    &__items {
+        text-align: center;
+    }
+
+    &__link:link,
+    &__link:visited {
+        font-size: 1.5rem;
+        color: $color-grey-light-1;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 200ms ease;
+        padding: 1.5rem;
+        display: inline-block;
+    }
+
+    &__link:hover,
+    &__link:active {
+        background-color: rgba($color-secondary, .05);
+        transform: translateY(-3px);
+    }
+}
+
+.close-btn {
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+        font-size: 3.5rem;
+        font-weight: 300;
+        color: $color-grey-light-1;
+        text-decoration: none;
+        display: inline-block;
+
+        position: absolute;
+        top: -4rem;
+        left: -5rem;
+
+        transition: all 200ms;
+    }
+    
+    &:hover,
+    &:active {
+        color: $color-secondary;
+    }
+}
+
+.close-btn-item {
+    align-self: end;
+}
+
+.nav-btn {
+    position: fixed;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+
+    transition: all 200ms;
+    
+
+    &::before,
+    &::after {
+        content: "";
+        background-color: #fff;
+        height: 2px;
+        width: 4.5rem;
+        display: block;
+        transition: all 200ms;
+    }
+
+    &::before { transform: translateY(-1rem); }
+    &::after { transform: translateY(-.5rem); }
+    
+
+}
+
+.nav-btn-wrapper {
+    margin-top: 4rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.nav-btn-wrapper:hover .nav-btn:hover {
+    &::before {
+        transform: translateY(-1.2rem);
+    }
+
+    &::after {
+        transform: translateY(-.3rem);
+    }
 }

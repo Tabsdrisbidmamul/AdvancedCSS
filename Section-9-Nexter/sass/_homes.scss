@@ -1,5 +1,6 @@
 .homes {
     grid-column: $center;
+    grid-row: 4 / 5;
 
     margin: 15rem 0;
 
@@ -16,6 +17,8 @@
 
     justify-items: center;
     grid-row-gap: 3.5rem;
+    overflow: hidden;
+    border-radius: 3px;
     
 
     &__img {
@@ -25,6 +28,7 @@
         z-index: 10;
         
         margin-bottom: 3.5rem;
+        
     }
 
     &__like {

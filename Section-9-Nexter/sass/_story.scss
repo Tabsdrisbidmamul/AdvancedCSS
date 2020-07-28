@@ -1,5 +1,7 @@
 .story {
     &__pictures {
+        grid-row: 3 / 4;
+
         background-image: linear-gradient(
             to bottom,
             rgba($color-primary, .5), 
@@ -31,6 +33,8 @@
     }
 
     &__content {
+        grid-row: 3 / 4;
+
         display: flex;
         flex-flow: column;
         align-items: start;
