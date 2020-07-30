@@ -4,9 +4,13 @@
     grid-row: 1 / -1;
     transition: all 50ms;
 
-    position: relative;
+    // position: relative;
     overflow-x: hidden;
 
+    @media screen and (max-width: $bp-large) {
+        grid-column: 1 / - 1;
+        grid-row: 1 / 2;
+    }
 
     &__subgrid {
         display: grid;
@@ -17,7 +21,7 @@
     &__nav {
         list-style: none;
         display: none;
-        position: fixed;
+        // position: fixed;
         // margin-left: 4rem;
         top: 5rem;
         left: 7rem;
@@ -74,7 +78,7 @@
 }
 
 .nav-btn {
-    position: fixed;
+    // position: fixed;
     border: none;
     border-radius: 0;
     cursor: pointer;
@@ -97,7 +101,7 @@
     }
 
     &::before { transform: translateY(-1rem); }
-    &::after { transform: translateY(-.5rem); }
+    &::after { transform: translateY(1rem); }
     
 
 }
@@ -108,6 +112,13 @@
     align-self: center;
     justify-content: center;
     cursor: pointer;
+
+    @media screen and (max-width: $bp-large) {
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 2.5rem;
+        margin-right: 2rem;
+    }
     
 }
 
